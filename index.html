@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collabit Media Agency</title>
+  <meta name="description" content="Collabit Media is a full-service digital agency driving growth through creativity and technology." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#c025f4",
+            "background-light": "#ffffff",
+            "background-dark": "#0a0a0a",
+            "card-dark": "#141414",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"],
+          },
+          borderRadius: {
+            DEFAULT: "0px",
+            lg: "0px",
+            xl: "0px",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply font-display bg-background-dark text-slate-100 selection:bg-primary selection:text-white;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+
+    .ticker-wrap {
+      width: 100%;
+      overflow: hidden;
+      background-color: transparent;
+      padding-left: 100%;
+      box-sizing: content-box;
+    }
+
+    .ticker {
+      display: inline-block;
+      white-space: nowrap;
+      padding-right: 100%;
+      box-sizing: content-box;
+      animation: ticker 30s linear infinite;
+    }
+
+    @keyframes ticker {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+
+    .ticker:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="bg-background-dark text-slate-100">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <div class="layout-container flex h-full grow flex-col">
+      <header class="flex items-center justify-between border-b border-white/10 px-6 py-4 lg:px-12 bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+        <a href="#home" class="flex items-center gap-4" aria-label="Collabit Media Home">
+          <div class="text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-3xl">token</span>
+          </div>
+          <h2 class="text-white text-xl font-bold tracking-tighter uppercase font-mono">Collabit Media</h2>
+        </a>
+
+        <div class="flex flex-1 justify-end gap-6 lg:gap-12 items-center">
+          <nav class="hidden md:flex items-center gap-8 font-mono text-[11px] uppercase tracking-widest">
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#services">Services</a>
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#portfolio">Portfolio</a>
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#about">About</a>
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#contact">Contact</a>
+          </nav>
+          <a href="#contact" class="hidden sm:inline-block bg-primary text-white text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-white hover:text-black transition-all">
+            Get Started
+          </a>
+          <button id="mobile-menu-toggle" class="md:hidden border border-white/20 p-2 text-white" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </header>
+
+      <div id="mobile-menu" class="hidden md:hidden border-b border-white/10 bg-background-dark">
+        <nav class="flex flex-col px-6 py-4 gap-4 font-mono text-[11px] uppercase tracking-widest">
+          <a class="text-slate-300 hover:text-primary transition-colors" href="#services">Services</a>
+          <a class="text-slate-300 hover:text-primary transition-colors" href="#portfolio">Portfolio</a>
+          <a class="text-slate-300 hover:text-primary transition-colors" href="#about">About</a>
+          <a class="text-slate-300 hover:text-primary transition-colors" href="#contact">Contact</a>
+          <a href="#contact" class="bg-primary text-white text-center text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-white hover:text-black transition-all">Get Started</a>
+        </nav>
+      </div>
+
+      <main class="flex-1" id="home">
+        <section class="border-b border-white/10">
+          <div class="flex flex-col lg:flex-row">
+            <div class="flex-1 p-8 lg:p-20 border-r border-white/10 flex flex-col justify-center">
+              <div class="flex flex-col gap-6">
+                <span class="text-primary font-mono text-xs uppercase tracking-[0.4em] font-bold">System.Init()</span>
+                <h1 class="text-white text-5xl lg:text-7xl font-black leading-[0.9] tracking-tighter uppercase">
+                  Driving Growth Through <span class="text-primary">Creativity</span> and Tech
+                </h1>
+                <p class="text-slate-400 text-base max-w-xl font-mono leading-relaxed opacity-80">
+                  &gt; We blend cutting-edge development with data-driven marketing to scale your digital presence and outperform the competition.
+                </p>
+                <div class="flex flex-wrap gap-0 mt-4 border border-white/10 w-fit">
+                  <a href="#portfolio" class="bg-white text-black px-8 py-5 text-sm font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
+                    View Projects
+                  </a>
+                  <a href="#contact" class="bg-transparent text-white px-8 py-5 text-sm font-bold uppercase tracking-widest border-l border-white/10 hover:bg-white/5 transition-all">
+                    Expert Consultation
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 bg-black overflow-hidden relative min-h-[400px]">
+              <div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+              <img alt="Digital Growth Visualization" class="w-full h-full object-cover grayscale opacity-60 contrast-125" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80" />
+              <div class="absolute bottom-8 right-8 bg-black/80 backdrop-blur px-4 py-2 border border-white/10 font-mono text-[10px] uppercase tracking-widest">
+                Ref: Visualization_001.js
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="bg-white/5 border-b border-white/10">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/10">
+            <article class="bg-background-dark p-8 group hover:bg-card-dark transition-colors border-none">
+              <div class="aspect-video mb-6 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=900&q=80" alt="Social media campaign dashboard" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <span class="text-primary font-mono text-[10px] uppercase">Service: 01</span>
+                <h3 class="text-white text-lg font-bold uppercase tracking-tight">Social Media Marketing</h3>
+                <p class="text-slate-500 text-sm font-mono leading-relaxed">Strategic social growth that builds communities and loyalty.</p>
+              </div>
+            </article>
+            <article class="bg-background-dark p-8 group hover:bg-card-dark transition-colors border-none">
+              <div class="aspect-video mb-6 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=900&q=80" alt="Video editing timeline" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <span class="text-primary font-mono text-[10px] uppercase">Service: 02</span>
+                <h3 class="text-white text-lg font-bold uppercase tracking-tight">Video Editing</h3>
+                <p class="text-slate-500 text-sm font-mono leading-relaxed">High-impact visual storytelling for the digital age.</p>
+              </div>
+            </article>
+            <article class="bg-background-dark p-8 group hover:bg-card-dark transition-colors border-none">
+              <div class="aspect-video mb-6 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" alt="Writing ad copy" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <span class="text-primary font-mono text-[10px] uppercase">Service: 03</span>
+                <h3 class="text-white text-lg font-bold uppercase tracking-tight">Ad Copy Creation</h3>
+                <p class="text-slate-500 text-sm font-mono leading-relaxed">Persuasive words designed specifically to maximize conversions.</p>
+              </div>
+            </article>
+            <article class="bg-background-dark p-8 group hover:bg-card-dark transition-colors border-none">
+              <div class="aspect-video mb-6 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=900&q=80" alt="Performance analytics charts" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <span class="text-primary font-mono text-[10px] uppercase">Service: 04</span>
+                <h3 class="text-white text-lg font-bold uppercase tracking-tight">Performance Marketing</h3>
+                <p class="text-slate-500 text-sm font-mono leading-relaxed">Targeted ad management across all major digital platforms.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="about" class="border-b border-white/10">
+          <div class="flex flex-col lg:flex-row border-b border-white/10">
+            <div class="lg:w-1/3 p-12 border-r border-white/10 bg-card-dark flex flex-col justify-between">
+              <div>
+                <h2 class="text-white text-4xl font-black uppercase tracking-tighter mb-4">Build the Future</h2>
+                <p class="text-slate-400 font-mono text-sm leading-relaxed">We engineer robust digital foundations that support your business growth for years to come.</p>
+              </div>
+              <a class="mt-12 text-primary font-mono text-xs uppercase tracking-widest font-bold flex items-center gap-2 hover:translate-x-2 transition-transform" href="#contact">
+                Explore Engineering <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+            <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/10">
+              <article class="bg-background-dark p-12 flex flex-col justify-between">
+                <div>
+                  <span class="material-symbols-outlined text-primary text-4xl mb-6">terminal</span>
+                  <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Website Building</h3>
+                  <p class="text-slate-500 mt-4 text-sm font-mono leading-relaxed">Custom-coded, high-performance websites optimized for SEO and user experience. From landing pages to enterprise portals.</p>
+                </div>
+                <div class="mt-12 flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-slate-400">
+                  [ Stack_Info ] <span class="material-symbols-outlined text-xs">chevron_right</span>
+                </div>
+              </article>
+              <article class="bg-background-dark p-12 flex flex-col justify-between">
+                <div>
+                  <span class="material-symbols-outlined text-primary text-4xl mb-6">database</span>
+                  <h3 class="text-2xl font-bold text-white uppercase tracking-tight">Software Development</h3>
+                  <p class="text-slate-500 mt-4 text-sm font-mono leading-relaxed">Tailored software solutions, mobile apps, and SaaS platforms built with the latest cloud-native technologies.</p>
+                </div>
+                <div class="mt-12 flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-slate-400">
+                  [ View_Repo ] <span class="material-symbols-outlined text-xs">chevron_right</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-12 border-b border-white/10 overflow-hidden bg-background-dark">
+          <div class="mb-8 px-12">
+            <h2 class="text-slate-500 font-mono text-[10px] font-bold uppercase tracking-[0.4em]">Trusted by industry leaders</h2>
+          </div>
+          <div class="ticker-wrap">
+            <div class="ticker">
+              <div class="inline-flex gap-20 items-center grayscale opacity-40 hover:opacity-100 transition-opacity">
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase"><span class="material-symbols-outlined">cloud</span> Google</div>
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase"><span class="material-symbols-outlined">all_inclusive</span> Meta</div>
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase"><span class="material-symbols-outlined">shopping_cart</span> Amazon</div>
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase"><span class="material-symbols-outlined">movie</span> Netflix</div>
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase"><span class="material-symbols-outlined">computer</span> Microsoft</div>
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase ml-20"><span class="material-symbols-outlined">cloud</span> Google</div>
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase"><span class="material-symbols-outlined">all_inclusive</span> Meta</div>
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase"><span class="material-symbols-outlined">shopping_cart</span> Amazon</div>
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase"><span class="material-symbols-outlined">movie</span> Netflix</div>
+                <div class="flex items-center gap-3 text-2xl font-black tracking-tighter text-white uppercase"><span class="material-symbols-outlined">computer</span> Microsoft</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio" class="border-b border-white/10 bg-card-dark/30">
+          <div class="p-12 lg:px-20 py-20">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+              <div>
+                <h2 class="text-white text-4xl font-black uppercase tracking-tighter">What Our Clients Say</h2>
+                <p class="text-slate-500 font-mono text-sm mt-2">Real results for industry-leading companies.</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-white/10 border border-white/10">
+              <article class="bg-background-dark p-10 flex flex-col justify-between">
+                <p class="text-slate-300 font-mono text-sm leading-relaxed mb-10 italic">"Collabit Media transformed our online presence. Their engineering team built a platform that scales effortlessly with our user growth."</p>
+                <div class="flex items-center gap-3 pt-6 border-t border-white/5">
+                  <div class="w-8 h-8 rounded-full overflow-hidden bg-primary/20 grayscale">
+                    <img alt="Sarah Chen" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" />
+                  </div>
+                  <div class="overflow-hidden">
+                    <h4 class="font-bold text-white text-xs uppercase tracking-tight">Sarah Chen</h4>
+                    <p class="text-[9px] text-slate-500 font-mono uppercase">CTO / InnovateX</p>
+                  </div>
+                </div>
+              </article>
+              <article class="bg-background-dark p-10 flex flex-col justify-between">
+                <p class="text-slate-300 font-mono text-sm leading-relaxed mb-10 italic">"The performance marketing results were immediate. We saw a 150% increase in qualified leads within the first quarter."</p>
+                <div class="flex items-center gap-3 pt-6 border-t border-white/5">
+                  <div class="w-8 h-8 rounded-full overflow-hidden bg-primary/20 grayscale">
+                    <img alt="Marcus Thorne" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" />
+                  </div>
+                  <div class="overflow-hidden">
+                    <h4 class="font-bold text-white text-xs uppercase tracking-tight">Marcus Thorne</h4>
+                    <p class="text-[9px] text-slate-500 font-mono uppercase">CEO / Peak Performance</p>
+                  </div>
+                </div>
+              </article>
+              <article class="bg-background-dark p-10 flex flex-col justify-between">
+                <p class="text-slate-300 font-mono text-sm leading-relaxed mb-10 italic">"Creative excellence combined with technical depth. They don't just build sites; they build digital experiences that convert."</p>
+                <div class="flex items-center gap-3 pt-6 border-t border-white/5">
+                  <div class="w-8 h-8 rounded-full overflow-hidden bg-primary/20 grayscale">
+                    <img alt="Elena Rodriguez" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&q=80" />
+                  </div>
+                  <div class="overflow-hidden">
+                    <h4 class="font-bold text-white text-xs uppercase tracking-tight">Elena Rodriguez</h4>
+                    <p class="text-[9px] text-slate-500 font-mono uppercase">Director / FinTech Global</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="p-12 lg:p-24 bg-primary text-white text-center flex flex-col items-center">
+          <div class="max-w-3xl">
+            <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">Ready to scale your digital presence?</h2>
+            <p class="text-white/80 font-mono text-lg mb-12">Join 100+ brands that have accelerated their growth with our creative and technical expertise.</p>
+            <form id="contact-form" data-sheet-webhook="https://script.google.com/macros/s/AKfycbyPJCLePoDMtcy92vQWdFTasb0MVfQrd9v-aqG9vSWHAP2lGK6e8smquNYwiz7uzL4ESg/exec" class="flex flex-col gap-4 max-w-xl mx-auto text-left">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="sr-only" for="phone">Phone Number</label>
+                  <input id="phone" name="phone" type="tel" placeholder="Phone number" class="w-full bg-white/10 border border-white/40 px-4 py-3 text-white placeholder:text-white/60 focus:ring-0 focus:border-white" />
+                </div>
+                <div>
+                  <label class="sr-only" for="whatsapp">WhatsApp Number</label>
+                  <input id="whatsapp" name="whatsapp" type="tel" placeholder="WhatsApp number" class="w-full bg-white/10 border border-white/40 px-4 py-3 text-white placeholder:text-white/60 focus:ring-0 focus:border-white" />
+                </div>
+              </div>
+              <label class="sr-only" for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="Your email address" class="w-full bg-white/10 border border-white/40 px-4 py-3 text-white placeholder:text-white/60 focus:ring-0 focus:border-white" />
+              <label class="sr-only" for="interest">Interested In</label>
+              <select id="interest" name="interest" required class="w-full bg-white/10 border border-white/40 px-4 py-3 text-white focus:ring-0 focus:border-white">
+                <option value="" selected disabled class="text-slate-900">Interested in...</option>
+                <option value="Video Meeting" class="text-slate-900">Video Meeting</option>
+                <option value="Phone Call" class="text-slate-900">Phone Call</option>
+              </select>
+              <label class="sr-only" for="message">Message</label>
+              <textarea id="message" name="message" required rows="4" placeholder="Tell us about your project" class="w-full bg-white/10 border border-white/40 px-4 py-3 text-white placeholder:text-white/60 focus:ring-0 focus:border-white"></textarea>
+              <div class="text-center font-mono text-xs text-white/85 uppercase tracking-widest mt-1">
+                Call: <a href="tel:+15551234567" class="hover:underline">+1 555 123 4567</a> · WhatsApp: <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" class="hover:underline">+1 555 123 4567</a>
+              </div>
+              <div class="flex flex-col sm:flex-row justify-center gap-0 border border-white/30 w-fit mx-auto mt-4">
+                <button type="submit" class="bg-white text-primary px-10 py-6 font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all text-sm">Start Your Project</button>
+                <a href="mailto:hello@collabitmedia.com" class="bg-transparent text-white px-10 py-6 font-bold uppercase tracking-widest hover:bg-white/10 transition-all border-l border-white/30 text-sm text-center">Contact Us</a>
+              </div>
+              <p id="form-status" class="text-center text-sm font-mono text-white/90 min-h-6" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="p-12 lg:px-20 bg-background-dark border-t border-white/10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-16">
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-3 mb-8">
+              <span class="material-symbols-outlined text-primary text-3xl">token</span>
+              <span class="text-xl font-bold tracking-tighter text-white uppercase font-mono">Collabit Media</span>
+            </div>
+            <p class="text-slate-500 font-mono text-xs max-w-sm mb-12 leading-loose">
+              A full-service digital agency focused on driving real business results through high-performance engineering and creative marketing.
+            </p>
+            <div class="flex gap-4">
+              <a class="w-10 h-10 border border-white/10 flex items-center justify-center text-slate-500 hover:border-primary hover:text-primary transition-all" href="#" aria-label="Website"><span class="material-symbols-outlined text-xl">public</span></a>
+              <a class="w-10 h-10 border border-white/10 flex items-center justify-center text-slate-500 hover:border-primary hover:text-primary transition-all" href="mailto:hello@collabitmedia.com" aria-label="Email"><span class="material-symbols-outlined text-xl">alternate_email</span></a>
+              <a class="w-10 h-10 border border-white/10 flex items-center justify-center text-slate-500 hover:border-primary hover:text-primary transition-all" href="#" aria-label="Team"><span class="material-symbols-outlined text-xl">group</span></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-8 text-[11px] uppercase tracking-widest font-mono">Services</h4>
+            <ul class="space-y-4 text-slate-500 font-mono text-[10px] uppercase tracking-widest">
+              <li><a class="hover:text-primary transition-colors" href="#services">Marketing Strategy</a></li>
+              <li><a class="hover:text-primary transition-colors" href="#services">Content Creation</a></li>
+              <li><a class="hover:text-primary transition-colors" href="#about">Web Development</a></li>
+              <li><a class="hover:text-primary transition-colors" href="#about">App Engineering</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-8 text-[11px] uppercase tracking-widest font-mono">Company</h4>
+            <ul class="space-y-4 text-slate-500 font-mono text-[10px] uppercase tracking-widest">
+              <li><a class="hover:text-primary transition-colors" href="#about">About Us</a></li>
+              <li><a class="hover:text-primary transition-colors" href="#about">Our Process</a></li>
+              <li><a class="hover:text-primary transition-colors" href="#portfolio">Success Stories</a></li>
+              <li><a class="hover:text-primary transition-colors" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-20 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4 font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
+          <p>© <span id="year"></span> Collabit Media Agency. System_v4.0.2</p>
+          <div class="flex gap-8">
+            <a class="hover:text-primary transition-colors" href="#">Privacy_Policy</a>
+            <a class="hover:text-primary transition-colors" href="#">Terms_Of_Service</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
