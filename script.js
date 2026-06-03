@@ -1,7 +1,7 @@
 // Google Ads conversion settings - replace with your real values
 // `GOOGLE_ADS_SEND_TO` should be the full send_to string from Google Ads, e.g. "AW-123456789/AbCdEfGhIjKlMnop_qrs"
 // If you only have an AW ID (AW-123456789) you can put it in GOOGLE_ADS_CONVERSION_ID, but `send_to` is recommended.
-const GOOGLE_ADS_SEND_TO = "G-2RR8RMMS00/call"; // TODO: replace with your conversion send_to
+const GOOGLE_ADS_SEND_TO = "G-2RR8RMMS00"; // TODO: replace with your conversion send_to
 const GOOGLE_ADS_CONVERSION_ID = "G-2RR8RMMS00"; // optional, replace with your AW ID
 
 const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
