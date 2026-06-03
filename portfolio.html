@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <!-- Google tag (gtag.js) GA4 & Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2RR8RMMS00"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2RR8RMMS00');
+  // Google Ads - Replace AW-XXXXX with your actual Ads conversion ID
+  gtag('config', 'AW-XXXXXXXXX');
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Collabit Media Agency</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="apple-touch-icon" href="logo.svg" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="View our successful case studies and digital transformation projects." />
+  <meta property="og:title" content="Portfolio - Collabit Media Agency" />
+  <meta property="og:description" content="View our successful case studies and digital transformation projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://collabitmedia.in/portfolio.html" />
+  <meta property="og:image" content="https://collabitmedia.in/logo.svg" />
+  <meta property="og:site_name" content="Collabit Media" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio - Collabit Media Agency" />
+  <meta name="twitter:description" content="View our successful case studies and digital transformation projects." />
+  <meta name="twitter:image" content="https://collabitmedia.in/logo.svg" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#c025f4",
+            "background-light": "#ffffff",
+            "background-dark": "#0a0a0a",
+            "card-dark": "#141414",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"],
+          },
+          borderRadius: {
+            DEFAULT: "0px",
+            lg: "0px",
+            xl: "0px",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Collabit Media",
+    "url": "https://collabitmedia.in",
+    "logo": "https://collabitmedia.in/logo.svg"
+  }
+  </script>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #0a0a0a;
+      color: #e2e8f0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #c025f4, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .case-study-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(to bottom right, #1e293b, #0f172a);
+      border: 1px solid #1e293b;
+      border-radius: 0px;
+      transition: all 0.3s ease;
+    }
+
+    .case-study-card:hover {
+      border-color: #c025f4;
+    }
+
+    .case-study-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(192, 37, 244, 0.1), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .case-study-card:hover::before {
+      opacity: 1;
+    }
+
+    .metric-box {
+      background-color: rgba(51, 65, 85, 0.5);
+      border: 1px solid #1e293b;
+      padding: 1rem;
+      border-radius: 0px;
+      transition: all 0.3s ease;
+    }
+
+    .metric-box:hover {
+      border-color: rgba(192, 37, 244, 0.5);
+      background-color: rgba(51, 65, 85, 0.7);
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #c025f4;
+    }
+
+    @media (min-width: 768px) {
+      .stat-number {
+        font-size: 2.25rem;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .stagger-in-1 { animation-delay: 0.1s; }
+    .stagger-in-2 { animation-delay: 0.2s; }
+    .stagger-in-3 { animation-delay: 0.3s; }
+  </style>
+</head>
+<body class="bg-background-dark text-slate-100">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <div class="layout-container flex h-full grow flex-col">
+      <header class="flex items-center justify-between border-b border-white/10 px-6 py-4 lg:px-12 bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+        <a href="index.html" class="flex items-center gap-4" aria-label="Collabit Media Home">
+          <img src="logo.svg" alt="Collabit Media logo" class="w-10 h-10 object-contain" />
+          <h2 class="text-white text-xl font-bold tracking-tighter uppercase font-mono">Collabit Media</h2>
+        </a>
+
+        <div class="flex flex-1 justify-end gap-6 lg:gap-12 items-center">
+          <nav class="hidden md:flex items-center gap-8 font-mono text-[11px] uppercase tracking-widest">
+            <a class="text-slate-400 hover:text-primary transition-colors" href="index.html#services">Services</a>
+            <a class="text-slate-400 hover:text-primary transition-colors" href="portfolio.html">Portfolio</a>
+            <a class="text-slate-400 hover:text-primary transition-colors" href="index.html#about">About</a>
+            <a class="text-slate-400 hover:text-primary transition-colors" href="index.html#contact">Contact</a>
+          </nav>
+          <a href="index.html#contact" class="hidden sm:inline-block bg-primary text-white text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-white hover:text-black transition-all">
+            Get Started
+          </a>
+          <button id="mobile-menu-toggle" class="md:hidden border border-white/20 p-2 text-white" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </header>
+
+      <div id="mobile-menu" class="hidden md:hidden border-b border-white/10 bg-background-dark">
+        <nav class="flex flex-col px-6 py-4 gap-4 font-mono text-[11px] uppercase tracking-widest">
+          <a class="text-slate-300 hover:text-primary transition-colors" href="index.html#services">Services</a>
+          <a class="text-slate-300 hover:text-primary transition-colors" href="portfolio.html">Portfolio</a>
+          <a class="text-slate-300 hover:text-primary transition-colors" href="index.html#about">About</a>
+          <a class="text-slate-300 hover:text-primary transition-colors" href="index.html#contact">Contact</a>
+          <a href="index.html#contact" class="bg-primary text-white text-center text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-white hover:text-black transition-all">Get Started</a>
+        </nav>
+      </div>
+
+      <main class="flex-1">
+        <!-- Portfolio Hero Section -->
+        <section class="border-b border-white/10">
+          <div class="p-12 lg:p-20 flex flex-col justify-center">
+            <div class="flex flex-col gap-6 max-w-5xl">
+              <div class="flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined">folder_open</span>
+                <span class="font-mono text-xs uppercase tracking-widest font-bold">Proof of Work</span>
+              </div>
+              <h1 class="text-white text-6xl lg:text-7xl font-black leading-[0.9] tracking-tighter uppercase">
+                Case Studies <span class="text-primary">Transforming</span> Businesses
+              </h1>
+              <p class="text-slate-400 text-lg max-w-3xl font-mono leading-relaxed opacity-80">
+                Explore how we've delivered exceptional digital transformation results for enterprise clients across multiple industries. Our data-driven approach combines web engineering, strategic marketing, and automation to drive measurable growth.
+              </p>
+              
+              <!-- Value Props -->
+              <div class="flex flex-wrap gap-8 mt-8">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+                  <span class="font-mono text-xs uppercase tracking-widest text-slate-300">Verified Results</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-2xl">trending_up</span>
+                  <span class="font-mono text-xs uppercase tracking-widest text-slate-300">300%+ Growth</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-2xl">business</span>
+                  <span class="font-mono text-xs uppercase tracking-widest text-slate-300">Enterprise Clients</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Case Studies Grid -->
+        <section class="p-12 lg:p-20 bg-background-dark border-b border-white/10">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Case Study 1: Kausthubha Company -->
+            <div class="case-study-card p-8 lg:p-10">
+              <div class="mb-6 flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-4xl">flash_on</span>
+                <div>
+                  <h3 class="text-xl font-bold text-white uppercase tracking-tight">Kausthubha Company</h3>
+                  <p class="text-slate-400 font-mono text-xs mt-1">Infrastructure & Clean Energy</p>
+                </div>
+              </div>
+
+              <!-- Key Metrics Row -->
+              <div class="grid grid-cols-3 gap-3 mb-8 py-6 border-y border-slate-800">
+                <div class="metric-box text-center">
+                  <div class="stat-number">+300%</div>
+                  <p class="text-slate-400 font-mono text-[10px] uppercase mt-2">B2B Leads</p>
+                </div>
+                <div class="metric-box text-center">
+                  <div class="stat-number">5x</div>
+                  <p class="text-slate-400 font-mono text-[10px] uppercase mt-2">Media Visibility</p>
+                </div>
+                <div class="metric-box text-center">
+                  <div class="stat-number">+70%</div>
+                  <p class="text-slate-400 font-mono text-[10px] uppercase mt-2">Conversion</p>
+                </div>
+              </div>
+
+              <!-- Challenges -->
+              <div class="mb-8">
+                <h4 class="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4 tracking-wide">
+                  <span class="material-symbols-outlined text-yellow-500 text-base">warning</span>
+                  Key Challenges
+                </h4>
+                <ul class="space-y-2 text-slate-400 font-mono text-xs">
+                  <li>• Outdated legacy web architecture failing mobile performance audits</li>
+                  <li>• Zero organic search visibility (0 keywords in Top 20)</li>
+                  <li>• Only 340 sessions/month vs. competitor average of 4,800</li>
+                </ul>
+              </div>
+
+              <!-- Solutions -->
+              <div class="mb-8">
+                <h4 class="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4 tracking-wide">
+                  <span class="material-symbols-outlined text-green-500 text-base">build</span>
+                  Solutions Implemented
+                </h4>
+                <ul class="space-y-2 text-slate-400 font-mono text-xs">
+                  <li>✓ Premium corporate redesign with headless architecture</li>
+                  <li>✓ Structural inbound SEO funnel for high-intent keywords</li>
+                  <li>✓ B2B performance marketing & CRM automation</li>
+                </ul>
+              </div>
+
+              <!-- Performance Metrics -->
+              <div class="mb-8">
+                <h4 class="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4 tracking-wide">
+                  <span class="material-symbols-outlined text-blue-500 text-base">trending_up</span>
+                  Performance Metrics
+                </h4>
+                <ul class="space-y-2 text-slate-400 font-mono text-xs">
+                  <li>• +1,150% organic monthly traffic (340 → 4,250)</li>
+                  <li>• -79.3% page load reduction (5.8s → 1.2s)</li>
+                  <li>• 38 keywords ranked in Top-10 organic</li>
+                  <li>• +1,100% increase in qualified RFPs</li>
+                  <li>• $2.4M+ pipeline impact</li>
+                </ul>
+              </div>
+
+              <!-- Technology Stack -->
+              <div>
+                <h4 class="text-white font-bold uppercase text-xs mb-3 tracking-wide">Technology Stack</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">Next.js</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">React</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">Tailwind CSS</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">HubSpot CRM</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">Google Ads</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">Zapier</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Study 2: SriSahasra Power Solutions -->
+            <div class="case-study-card p-8 lg:p-10">
+              <div class="mb-6 flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-4xl">engineering</span>
+                <div>
+                  <h3 class="text-xl font-bold text-white uppercase tracking-tight">SriSahasra Power Solutions</h3>
+                  <p class="text-slate-400 font-mono text-xs mt-1">Industrial Power & Geomatics</p>
+                </div>
+              </div>
+
+              <!-- Key Metrics Row -->
+              <div class="grid grid-cols-3 gap-3 mb-8 py-6 border-y border-slate-800">
+                <div class="metric-box text-center">
+                  <div class="stat-number">+300%</div>
+                  <p class="text-slate-400 font-mono text-[10px] uppercase mt-2">Contract Leads</p>
+                </div>
+                <div class="metric-box text-center">
+                  <div class="stat-number">5.2x</div>
+                  <p class="text-slate-400 font-mono text-[10px] uppercase mt-2">Client Interaction</p>
+                </div>
+                <div class="metric-box text-center">
+                  <div class="stat-number">+70%</div>
+                  <p class="text-slate-400 font-mono text-[10px] uppercase mt-2">Conversion</p>
+                </div>
+              </div>
+
+              <!-- Challenges -->
+              <div class="mb-8">
+                <h4 class="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4 tracking-wide">
+                  <span class="material-symbols-outlined text-yellow-500 text-base">warning</span>
+                  Key Challenges
+                </h4>
+                <ul class="space-y-2 text-slate-400 font-mono text-xs">
+                  <li>• Outdated legacy infrastructure causing 10+ second load times</li>
+                  <li>• Poor mobile experience losing 60% of potential customers</li>
+                  <li>• Manual quote system causing 2-3 week turnaround on inquiries</li>
+                </ul>
+              </div>
+
+              <!-- Solutions -->
+              <div class="mb-8">
+                <h4 class="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4 tracking-wide">
+                  <span class="material-symbols-outlined text-green-500 text-base">build</span>
+                  Solutions Implemented
+                </h4>
+                <ul class="space-y-2 text-slate-400 font-mono text-xs">
+                  <li>✓ Cloud-native web platform with CDN optimization</li>
+                  <li>✓ Mobile-first responsive design with progressive enhancement</li>
+                  <li>✓ Automated lead qualification & CRM integration system</li>
+                </ul>
+              </div>
+
+              <!-- Performance Metrics -->
+              <div class="mb-8">
+                <h4 class="flex items-center gap-2 text-white font-bold uppercase text-xs mb-4 tracking-wide">
+                  <span class="material-symbols-outlined text-blue-500 text-base">trending_up</span>
+                  Performance Metrics
+                </h4>
+                <ul class="space-y-2 text-slate-400 font-mono text-xs">
+                  <li>• +1,100% monthly inquiry increase (520 → 5,720)</li>
+                  <li>• 81% improvement in page load performance (10.2s → 1.9s)</li>
+                  <li>• -75.2% reduction in operational costs through automation</li>
+                  <li>• 95% quote turnaround time improvement (3 weeks → 2 hours)</li>
+                  <li>• $3.1M revenue impact in first year</li>
+                </ul>
+              </div>
+
+              <!-- Technology Stack -->
+              <div>
+                <h4 class="text-white font-bold uppercase text-xs mb-3 tracking-wide">Technology Stack</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">Vue.js</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">Nuxt</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">Node.js</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">PostgreSQL</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">AWS</span>
+                  <span class="bg-slate-900/50 border border-slate-800 px-3 py-1 font-mono text-[10px] text-slate-300 uppercase">Salesforce</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="p-12 lg:p-24 bg-primary text-white text-center flex flex-col items-center">
+          <div class="max-w-3xl">
+            <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">Ready to transform your business?</h2>
+            <p class="text-white/80 font-mono text-lg mb-12">Let's discuss how we can deliver similar results for your organization.</p>
+            <a href="index.html#contact" class="bg-white text-primary px-10 py-6 font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all inline-block text-sm">
+              Start Your Project
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="p-12 lg:px-20 bg-background-dark border-t border-white/10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-16">
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-3 mb-8">
+              <span class="material-symbols-outlined text-primary text-3xl">token</span>
+              <span class="text-xl font-bold tracking-tighter text-white uppercase font-mono">Collabit Media</span>
+            </div>
+            <p class="text-slate-500 font-mono text-xs max-w-sm mb-12 leading-loose">
+              A full-service digital agency focused on driving real business results through high-performance engineering and creative marketing.
+            </p>
+            <p>
+              Vamica Arcade, Madhuranagar,
+              SR Nagar, Hyderabad - 500038
+            </p>
+            <div class="flex gap-4">
+              <a class="w-10 h-10 border border-white/10 flex items-center justify-center text-slate-500 hover:border-primary hover:text-primary transition-all" href="#" aria-label="Website"><span class="material-symbols-outlined text-xl">public</span></a>
+              <a class="w-10 h-10 border border-white/10 flex items-center justify-center text-slate-500 hover:border-primary hover:text-primary transition-all" href="mailto:hello@collabitmedia.com" aria-label="Email"><span class="material-symbols-outlined text-xl">alternate_email</span></a>
+              <a class="w-10 h-10 border border-white/10 flex items-center justify-center text-slate-500 hover:border-primary hover:text-primary transition-all" href="#" aria-label="Team"><span class="material-symbols-outlined text-xl">group</span></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-8 text-[11px] uppercase tracking-widest font-mono">Services</h4>
+            <ul class="space-y-4 text-slate-500 font-mono text-[10px] uppercase tracking-widest">
+              <li><a class="hover:text-primary transition-colors" href="index.html#services">Marketing Strategy</a></li>
+              <li><a class="hover:text-primary transition-colors" href="index.html#services">Content Creation</a></li>
+              <li><a class="hover:text-primary transition-colors" href="index.html#about">Web Development</a></li>
+              <li><a class="hover:text-primary transition-colors" href="index.html#about">App Engineering</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-8 text-[11px] uppercase tracking-widest font-mono">Company</h4>
+            <ul class="space-y-4 text-slate-500 font-mono text-[10px] uppercase tracking-widest">
+              <li><a class="hover:text-primary transition-colors" href="index.html#about">About Us</a></li>
+              <li><a class="hover:text-primary transition-colors" href="index.html#about">Our Process</a></li>
+              <li><a class="hover:text-primary transition-colors" href="portfolio.html">Success Stories</a></li>
+              <li><a class="hover:text-primary transition-colors" href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-20 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4 font-mono text-[9px] uppercase tracking-[0.2em] text-slate-600">
+          <p>© <span id="year"></span> Collabit Media Agency. System_v4.0.2</p>
+          <div class="flex gap-8">
+            <a class="hover:text-primary transition-colors" href="#">Privacy_Policy</a>
+            <a class="hover:text-primary transition-colors" href="#">Terms_Of_Service</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
