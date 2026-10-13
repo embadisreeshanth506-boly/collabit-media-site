@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://collabit-media-site.vercel.app/sitemap.xml
+Sitemap: https://collabitmedia.in/sitemap.xml

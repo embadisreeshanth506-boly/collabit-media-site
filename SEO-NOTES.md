@@ -1,6 +1,6 @@
 # Collabit Media: SEO implementation and keyword notes
 
-Research date: 13 October 2026. Audience: English-speaking prospects worldwide, as requested. Production origin confirmed from the repository homepage and an HTTP 200 response: https://collabit-media-site.vercel.app.
+Research date: 13 October 2026. Audience: English-speaking prospects worldwide, as requested. Production origin corrected to https://collabitmedia.in by the owner and verified with an HTTP 200 response. All sitemap, canonical, structured-data, and social URLs use this custom domain.
 
 ## Research method and limits
 
