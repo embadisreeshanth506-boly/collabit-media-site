@@ -1,4 +1,11 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/apps/neonrush/privacy",
+      "destination": "/neon-rush-privacy-policy",
+      "permanent": true
+    }
+  ]
 }
