@@ -63,6 +63,18 @@
   font: 700 1.375rem/1.3 Manrope, sans-serif;
 }
 
+.blog-card:has(.blog-card-image) {
+  max-width: 38rem;
+}
+
+.blog-card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+}
+
 .blog-card a:hover,
 .blog-back:hover {
   text-decoration: underline;
@@ -98,4 +110,65 @@
 .blog-article .editorial img {
   max-width: 100%;
   height: auto;
+}
+
+.blog-article .blog-copy {
+  margin-top: 2rem;
+}
+
+.blog-figure {
+  margin: 1.5rem 0;
+}
+
+.blog-cover {
+  max-width: 68rem;
+  margin-top: 2rem;
+}
+
+.blog-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.blog-figure figcaption {
+  margin-top: 0.65rem;
+  color: #555d64;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.blog-toc {
+  margin: 2rem 0;
+  padding: 1.25rem clamp(1.25rem, 4vw, 2rem);
+  background: #f8f9f9;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.blog-article .blog-toc h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.blog-toc ol {
+  margin: 0.75rem 0;
+  padding-left: 1.35rem;
+}
+
+.blog-toc li {
+  margin: 0.35rem 0;
+}
+
+.blog-copy h3 {
+  margin-top: 1.3rem;
+  font-size: 1.125rem;
+}
+
+.blog-copy blockquote {
+  margin: 0.8rem 0;
+  padding: 0.25rem 1.2rem;
+  background: #f8f9f9;
+  border-left: 3px solid #759349;
 }
