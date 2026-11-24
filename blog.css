@@ -1,0 +1,101 @@
+.blog-main {
+  min-height: 60vh;
+  padding-bottom: clamp(3.5rem, 9vw, 7rem);
+}
+
+.blog-hero,
+.blog-article-heading {
+  padding: clamp(2.25rem, 7vw, 5.5rem) 0 clamp(2rem, 5vw, 3.75rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.blog-hero h1,
+.blog-article-heading h1 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  letter-spacing: -0.055em;
+  overflow-wrap: anywhere;
+}
+
+.blog-hero p,
+.blog-article-heading > p {
+  max-width: 55ch;
+  margin-top: 1rem;
+  color: #555d64;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.blog-articles {
+  padding-top: clamp(1.75rem, 4vw, 3.25rem);
+}
+
+.blog-articles > h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.035em;
+}
+
+.blog-empty,
+.blog-card {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #f8f9f9;
+  border: 1px solid var(--line);
+  border-radius: 1.125rem;
+}
+
+.blog-empty,
+.blog-card p,
+.blog-meta {
+  color: #555d64;
+  line-height: 1.65;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  gap: 1.25rem;
+}
+
+.blog-card h3 {
+  margin: 0.5rem 0;
+  font: 700 1.375rem/1.3 Manrope, sans-serif;
+}
+
+.blog-card a:hover,
+.blog-back:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.blog-meta {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.blog-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #496333;
+  font-weight: 700;
+}
+
+.blog-article-heading .blog-meta {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.blog-article .editorial {
+  max-width: 70ch;
+  margin-inline: 0;
+}
+
+.blog-article .editorial h2 {
+  margin-top: 2rem;
+}
+
+.blog-article .editorial img {
+  max-width: 100%;
+  height: auto;
+}

@@ -20,6 +20,7 @@ This is a static HTML, CSS, and JavaScript website deployed with Vercel at `coll
 
 - `index.html`: homepage
 - `products.html`: product collection
+- `blog.html`: article index
 - `fitmaker.html` and `mybrain.html`: product introductions
 - `sitemap.xml` and `robots.txt`: search discovery files
 - `vercel.json`: clean URL configuration
@@ -31,3 +32,21 @@ node scripts/check-seo.cjs
 ```
 
 These checks cover metadata uniqueness, internal links, structured-data syntax, and sitemap consistency. They do not measure rankings or traffic.
+
+## Publish a blog article
+
+1. Copy `templates/blog-article.html.txt` to `blog/your-article-slug.html`. Use lowercase words separated by hyphens for the slug.
+2. Replace every placeholder in the article, including the title, summary, author, dates, and canonical and sharing URLs. Use `YYYY-MM-DD` for the machine-readable date. Escape `&`, `<`, and `"` as `&amp;`, `&lt;`, and `&quot;` when entering plain text inside HTML attributes.
+3. In `blog.html`, replace the empty-state paragraph with the grid below for the first article. For later articles, insert another card at the top of the grid.
+
+   ```html
+   <div class="blog-grid">
+     <article class="blog-card">
+       <p class="blog-meta"><time datetime="YYYY-MM-DD">Article date</time></p>
+       <h3><a href="/blog/your-article-slug">Article title</a></h3>
+       <p>A short description of the article.</p>
+     </article>
+   </div>
+   ```
+
+4. Add `<url><loc>https://collabitmedia.in/blog/your-article-slug</loc></url>` to `sitemap.xml`, run `node scripts/check-seo.cjs`, and review the article in the Vercel preview.
